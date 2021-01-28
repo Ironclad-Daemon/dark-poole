@@ -3,27 +3,14 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+I am a cybersecurity enthusiast with a strong interest in ethical hacking, penetration testing, vulnerability analysis and network security. Since September 2020 I have been studing a BSc (Hons) degree in Ethical Hacking at Abertay University. I am part of various communities where i try to involve myself as much as possible and learn from those who are willing to teach me a thing or two. If you have helped me in the past to get me where i am today, then you have my undying gratitude.
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I find myself regularly completing CTF challenges and partaking in TryHackMe learning rooms. This space acts as a repository for anything i find interesting and wish to post for public viewing such as uni work, proffesional projects, CTF writeups etc. If you find an error in my work, please reach out as i am always looking to improve myself.
 
-There are currently two themes built on Poole:
+Let me know if you wish to use my work for something else!
 
-- [Hyde](https://hyde.getpoole.com)
-- [Lanyon](https://lanyon.getpoole.com)
+## Contact
 
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-- Built for [Jekyll](https://jekyllrb.com)
-- Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-- Coded with [Atom](https://atom.io), an amazing open source code editor
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+Have questions or suggestions? Feel free to reach out on Discord @Ironclad#3587 or [ask me on Twitter](https://twitter.com/ironclad_daemon).
 
 Thanks for reading!
