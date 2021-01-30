@@ -21,8 +21,6 @@ As a beginner in cybersecurity, i constantly find myself refering to the followi
 - [Hacker101](https://www.hacker101.com/)
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 
------
-
 ## Coding Resources
 
 - [Codecademy](https://www.codecademy.com/)
