@@ -3,13 +3,13 @@ layout: post
 title: Intoructory Post
 ---
 
-##Introuduction
+## Introuduction
 
 In this post I briefly cover how I got to where I am today. In future years i wish to look back on this post and reflect on my decision making.
 
 -----
 
-##The story thus far
+## The story thus far
 
 I started out working as a Network Engineer, I thoroughly enjoyed the role and got involved with a lot of wireless network installations, server migrations, and just overall keeping the business up and running. Then I started to get into the security side of the job, working on firewall configurations and endpoint lockdowns. Although this was deemed basic in retrospect its what kick-started my interest in cyber security.
 
