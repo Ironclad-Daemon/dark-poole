@@ -17,4 +17,4 @@ I started researching cyber roles and careers, I joined numerous infosec communi
 
 After a lot of job market research, I found that most high-end red team cybersecurity jobs wanted degrees, and after doing what I was doing for a while I soon realised I would regret not going to university whilst I was still young. To my friends and family, it was a pretty spontaneous decision to drop what I had, almost overnight, and move to Scotland to study at Abertay University. 
 
-Now im 400* miles from home starting a career in cyberrsecurity based on a whim!
+Now im 400* miles from home starting a career in cybersecurity based on a whim!
