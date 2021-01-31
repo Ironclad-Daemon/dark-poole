@@ -76,6 +76,7 @@ When we run the UDP Server the socket is started on port 8888 of our localhost, 
 1. The client will send the first integer followed by the operator, followed by the second integer.
 2. The server receives and reads those messages, calculates the sum based off the operator and will then send the answer back to the client. 
 3. The client decodes and outputs the sum to the terminal. 
+
 The working scenario can be seen in the screenshots below.
 
 ![placeholder](https://i.imgur.com/QyAS0om.png "UDP Client")
