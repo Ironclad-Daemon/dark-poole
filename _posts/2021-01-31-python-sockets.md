@@ -6,8 +6,69 @@ title: Python Sockets
 ## Introduction
 
 I took a look into python sockets and created a UDP calculator, and a TCP document statistic reporting tool. Collated below are my breif notes.
-
+For better understanding i have included a table for the use of TCP vs UDP.
 -----
+
+## TCP vs UDP
+
+<table>
+  <thead>
+    <tr>
+      <th>TCP</th>
+      <th>UDP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>It is a connection-oriented protocol.</td>
+      <td>It is a connectionless protocol.</td>
+    </tr>
+    <tr>
+      <td>TCP reads data as streams of bytes, and the message is transmitted to segment boundaries.</td>
+      <td>UDP messages contain packets that were sent one by one. It also checks for integrity at the arrival time.</td>
+    </tr>
+    <tr>
+       <td>TCP messages make their way across the internet from one computer to another.</td>
+       <td>It is not connection-based, so one program can send lots of packets to another.</td>
+    </tr>
+    <tr>
+       <td>TCP rearranges data packets in the specific order.</td>
+       <td>UDP protocol has no fixed order because all packets are independent of each other.</td>
+    </tr>
+    <tr>
+       <td>The speed for TCP is slower.</td>
+       <td>UDP is faster as error recovery is not attempted.</td>
+    </tr>
+    <tr>
+       <td>Header size is 20 bytes</td>
+       <td>Header size is 8 bytes.</td>
+    </tr>
+    <tr>
+       <td>TCP is heavy-weight. TCP needs three packets to set up a socket connection before any user data can be sent.</td>
+       <td>UDP is lightweight. There are no tracking connections, ordering of messages, etc.</td>
+    </tr>
+    <tr>
+       <td>TCP does error checking and also makes error recovery.</td>
+       <td>UDP performs error checking, but it discards erroneous packets.</td>
+    </tr>
+    <tr>
+       <td>Acknowledgment segments</td>
+       <td>No Acknowledgment segments</td>
+    </tr>
+    <tr>
+       <td>Using handshake protocol like SYN, SYN-ACK, ACK</td>
+       <td>No handshake (so connectionless protocol)</td>
+    </tr>
+    <tr>
+       <td>TCP is reliable as it guarantees delivery of data to the destination router.</td>
+       <td>The delivery of data to the destination can't be guaranteed in UDP.</td>
+    </tr>
+    <tr>
+       <td>TCP offers extensive error checking mechanisms because it provides flow control and acknowledgment of data.</td>
+       <td>UDP has just a single error checking mechanism which is used for checksums.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## UDP Calculator
 
@@ -120,3 +181,72 @@ The working scenario can be seen in the screenshots below.
 ![placeholder](https://i.imgur.com/EAzGz9t.png "Lazydog.txt")
 
 ![placeholder](https://i.imgur.com/FtmotnT.png "TCP Server")
+
+Client Code:
+
+```python
+import socket
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+host = 'localhost'
+port = 12546
+s.connect((host, port)) #Initialises the connection
+
+msg = s.recv(1024)
+print(msg.decode("utf-8"))
+
+print("Uploading File...\n")
+files = open("lazydog.txt", "r")
+#After opening the file, the contents are sent from here
+sendData = files.read(1024)
+s.send(bytes(sendData, "utf-8"))
+print("File Uploaded!\n\nDocument Statistics Received, Opening...\n")
+
+print("===================\nDocument Statistics\n===================\n")
+charmsg = s.recv(1024)
+print("No. of Characters: ", charmsg.decode("utf-8"))
+wordmsg = s.recv(1024)
+print("No. of Words: ", wordmsg.decode("utf-8"))
+input()
+s.close()
+```
+
+Server Code:
+
+```python
+import socket
+import time
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+host = 'localhost'
+port = 12546
+s.bind((host, port))
+s.listen(5)
+print("Server is listening...")
+
+while True:
+    #Accepts the conneciton from Client
+    clientsocket, address = s.accept()
+
+    #Sends a welcome message
+    print("Connection from", address, "has been established!\n")
+    time.sleep(.500)
+    clientsocket.send(bytes("Welcome to the server\n", "utf-8"))
+
+    print ("File Received, Opening...\n")
+    #Receives message from client
+    recvData = clientsocket.recv(1024)
+    
+    #Counts words and characters to store as seperate variables
+    wordcount = len(recvData.split())
+    chars = len(recvData)
+    print ("Sending Document Statistics...\n")
+    
+    #Sends message back to client
+    clientsocket.send(bytes(str(chars), "utf-8"))
+    #I put a pause here because it was sending too fast
+    time.sleep(.500)
+    clientsocket.send(bytes(str(wordcount), "utf-8"))
+
+s.close()
+```
