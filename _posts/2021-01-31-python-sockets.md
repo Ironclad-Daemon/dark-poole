@@ -15,9 +15,13 @@ When we run the UDP Server the socket is started on port 8888 of our localhost, 
 1. The client will send the first integer followed by the operator, followed by the second integer.
 2. The server receives and reads those messages, calculates the sum based off the operator and will then send the answer back to the client. 
 3. The client decodes and outputs the sum to the terminal. 
-The working scenario can be seen in the screenshot below.
+The working scenario can be seen in the screenshots below.
 
-Client:
+![placeholder](https://i.imgur.com/QyAS0om.png "UDP Client")
+
+![placeholder](https://i.imgur.com/GVPoWZV.png "UDP Server")
+
+Client Code:
 
 ```python
 import socket                                                  
@@ -51,9 +55,7 @@ input()
 clientSocket.close()
 ```
 
-![placeholder](https://i.imgur.com/QyAS0om.png "UDP Client")
-
-Server:
+Server Code:
 
 ```python
 import socket
@@ -103,4 +105,18 @@ while 1:
 serverSocket.close()
 ```
 
-![placeholder](https://i.imgur.com/GVPoWZV.png "UDP Server")
+## TCP Document Statistic Reporting Tool
+
+When the TCP Server is run, it opens on port 12546 on our localhost machine.
+1. Three-way handshake occurs (SYN, SYN/ACK, ACK)
+2. The client then encodes and sends the contents of our lazydog.txt file.
+3. The server receives that data, decodes it, and counts the words and the characters within the string.
+4. The server then encodes that and sends it back to the client.
+5. The client receives that data, decodes it, and displays it through the terminal.
+The working scenario can be seen in the screenshots below.
+
+![placeholder](https://i.imgur.com/sfbla4K.png "TCP Client")
+
+![placeholder](https://i.imgur.com/EAzGz9t.png "Lazydog.txt")
+
+![placeholder](https://i.imgur.com/FtmotnT.png "TCP Server")
