@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Intoructory Post
+title: Introductory Post
 ---
 
 ## Introuduction
