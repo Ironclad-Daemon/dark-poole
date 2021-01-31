@@ -15,7 +15,7 @@ When we run the UDP Server the socket is started on port 8888 of our localhost, 
 1. The client will send the first integer followed by the operator, followed by the second integer.
 2. The server receives and reads those messages, calculates the sum based off the operator and will then send the answer back to the client. 
 3. The client decodes and outputs the sum to the terminal. 
-The working scenario can be seen in the screenshot below. (The top left is the client and bottom right is the server)
+The working scenario can be seen in the screenshot below.
 
 Client:
 
@@ -50,6 +50,8 @@ print ('The answer is: ', answer.decode())
 input()
 clientSocket.close()
 ```
+
+![placeholder](https://imgur.com/MHFxln6 "UDP Client")
 
 Server:
 
@@ -100,3 +102,5 @@ while 1:
 
 serverSocket.close()
 ```
+
+![placeholder](https://imgur.com/GVPoWZV "UDP Server")
