@@ -28,9 +28,9 @@ serverName = 'Localhost'
 serverport = 8888                                              
 clientSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
                                                                
-print ('===============================')                      
+print ('====================================')                      
 print ('Welcome to Ironclads UDP Calculator!')                      
-print ('===============================')                      
+print ('====================================')                      
 print ('\n')                                                   
                                                                
                                                                
@@ -51,7 +51,7 @@ input()
 clientSocket.close()
 ```
 
-![placeholder](https://imgur.com/MHFxln6 "UDP Client")
+![placeholder](https://i.imgur.com/MHFxln6.png "UDP Client")
 
 Server:
 
@@ -103,4 +103,4 @@ while 1:
 serverSocket.close()
 ```
 
-![placeholder](https://imgur.com/GVPoWZV "UDP Server")
+![placeholder](https://i.imgur.com/GVPoWZV.png "UDP Server")
