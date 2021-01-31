@@ -175,6 +175,7 @@ When the TCP Server is run, it opens on port 12546 on our localhost machine.
 3. The server receives that data, decodes it, and counts the words and the characters within the string.
 4. The server then encodes that and sends it back to the client.
 5. The client receives that data, decodes it, and displays it through the terminal.
+
 The working scenario can be seen in the screenshots below.
 
 ![placeholder](https://i.imgur.com/sfbla4K.png "TCP Client")
