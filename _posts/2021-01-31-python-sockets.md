@@ -5,8 +5,7 @@ title: Socket Programming in Python
 
 ## Introduction
 
-I took a look into python sockets and created a UDP calculator, and a TCP document statistic reporting tool. Collated below are my breif notes.
-For better understanding i have included a table for the use of TCP vs UDP.
+I took a look into python sockets and created a UDP calculator, and a TCP document statistic reporting tool. Collated below are my breif notes. Overall i quite enjoyed researching into this.
 
 -----
 
