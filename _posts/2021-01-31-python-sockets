@@ -1,1 +1,20 @@
-jkj
+---
+layout: post
+title: Python Sockets
+---
+
+## Introduction
+
+I took a look into python sockets and created a UDP calculator, and a TCP document statistic reporting tool. Collated below are my breif notes.
+
+-----
+
+## UDP Calculator
+
+When we run the UDP Server the socket is started on port 8888 of our localhost, and it just waits for a client to send data. 
+-	The client will send the first integer followed by the operator, followed by the second integer.
+-	The server receives and reads those messages, calculates the sum based off the operator and will then send the answer back to the client. 
+-	The client decodes and outputs the sum to the terminal. 
+The working scenario can be seen in the screenshot below. (The top left is the client and bottom right is the server)
+
+Code:
