@@ -23,7 +23,7 @@ The working scenario can be seen in the screenshots below.
 
 ![placeholder](https://i.imgur.com/GVPoWZV.png "UDP Server")
 
-Client Code:
+UDP Client Code:
 
 ```python
 import socket                                                  
@@ -57,7 +57,7 @@ input()
 clientSocket.close()
 ```
 
-Server Code:
+UDP Server Code:
 
 ```python
 import socket
@@ -122,7 +122,7 @@ The working scenario can be seen in the screenshots below.
 
 ![placeholder](https://i.imgur.com/FtmotnT.png "TCP Server")
 
-Client Code:
+TCP Client Code:
 
 ```python
 import socket
@@ -151,7 +151,7 @@ input()
 s.close()
 ```
 
-Server Code:
+TCP Server Code:
 
 ```python
 import socket
