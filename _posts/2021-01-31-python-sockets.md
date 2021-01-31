@@ -181,8 +181,6 @@ The working scenario can be seen in the screenshots below.
 
 ![placeholder](https://i.imgur.com/sfbla4K.png "TCP Client")
 
-![placeholder](https://i.imgur.com/EAzGz9t.png "Lazydog.txt")
-
 ![placeholder](https://i.imgur.com/FtmotnT.png "TCP Server")
 
 Client Code:
