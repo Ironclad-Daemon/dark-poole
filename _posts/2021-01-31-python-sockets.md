@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python Sockets
+title: Socket Programming in Python
 ---
 
 ## Introduction
