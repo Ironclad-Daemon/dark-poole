@@ -51,7 +51,7 @@ input()
 clientSocket.close()
 ```
 
-![placeholder](https://i.imgur.com/MHFxln6.png "UDP Client")
+![placeholder](https://i.imgur.com/GVPoWZV.png "UDP Client")
 
 Server:
 
